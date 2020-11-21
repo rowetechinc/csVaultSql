@@ -1,0 +1,222 @@
+﻿@page
+@model csVaultSql.Pages.Adcp.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Serialnumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Customer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Ordernumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Depthrating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Headtype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Hardware)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Connectortype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Frequency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Firmware)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Software)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Temperaturepresent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Pressuresensorpresent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Pressuresensorrating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Ethernetinstalled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Recordersize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Recorderformatted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Systemtype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Application)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Numbatts)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Productnumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Scalefactor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Isvesselmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Isriversystem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Boardorientation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Housingtype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Cablelength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Istriggerout)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Istriggerin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Modified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adcp[0].Rmanumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Adcp) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Serialnumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Customer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ordernumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Depthrating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Headtype)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hardware)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Connectortype)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Frequency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Firmware)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Software)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Temperaturepresent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pressuresensorpresent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pressuresensorrating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ethernetinstalled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Recordersize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Recorderformatted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Systemtype)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Application)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numbatts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Productnumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Scalefactor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isvesselmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isriversystem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Boardorientation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Housingtype)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cablelength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Istriggerout)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Istriggerin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modified)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rmanumber)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

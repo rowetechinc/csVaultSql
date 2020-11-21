@@ -1,0 +1,211 @@
+﻿@page
+@model csVaultSql.Pages.Adcp.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Adcp</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Created)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Created)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Serialnumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Serialnumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Customer)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Customer)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Ordernumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Ordernumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Depthrating)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Depthrating)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Headtype)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Headtype)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Hardware)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Hardware)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Connectortype)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Connectortype)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Frequency)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Frequency)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Firmware)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Firmware)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Software)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Software)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Temperaturepresent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Temperaturepresent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Pressuresensorpresent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Pressuresensorpresent)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Pressuresensorrating)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Pressuresensorrating)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Ethernetinstalled)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Ethernetinstalled)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Recordersize)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Recordersize)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Recorderformatted)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Recorderformatted)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Systemtype)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Systemtype)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Application)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Application)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Numbatts)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Numbatts)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Productnumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Productnumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Scalefactor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Scalefactor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Isvesselmount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Isvesselmount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Isriversystem)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Isriversystem)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Boardorientation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Boardorientation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Housingtype)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Housingtype)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Cablelength)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Cablelength)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Istriggerout)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Istriggerout)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Istriggerin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Istriggerin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Modified)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Modified)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Adcp.Rmanumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Adcp.Rmanumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Adcp.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

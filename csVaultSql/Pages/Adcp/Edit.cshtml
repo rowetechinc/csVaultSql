@@ -1,0 +1,190 @@
+﻿@page
+@model csVaultSql.Pages.Adcp.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Adcp</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Adcp.Id" />
+            <div class="form-group">
+                <label asp-for="Adcp.Name" class="control-label"></label>
+                <input asp-for="Adcp.Name" class="form-control" />
+                <span asp-validation-for="Adcp.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Created" class="control-label"></label>
+                <input asp-for="Adcp.Created" class="form-control" />
+                <span asp-validation-for="Adcp.Created" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Serialnumber" class="control-label"></label>
+                <input asp-for="Adcp.Serialnumber" class="form-control" />
+                <span asp-validation-for="Adcp.Serialnumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Customer" class="control-label"></label>
+                <input asp-for="Adcp.Customer" class="form-control" />
+                <span asp-validation-for="Adcp.Customer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Ordernumber" class="control-label"></label>
+                <input asp-for="Adcp.Ordernumber" class="form-control" />
+                <span asp-validation-for="Adcp.Ordernumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Depthrating" class="control-label"></label>
+                <input asp-for="Adcp.Depthrating" class="form-control" />
+                <span asp-validation-for="Adcp.Depthrating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Headtype" class="control-label"></label>
+                <input asp-for="Adcp.Headtype" class="form-control" />
+                <span asp-validation-for="Adcp.Headtype" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Hardware" class="control-label"></label>
+                <input asp-for="Adcp.Hardware" class="form-control" />
+                <span asp-validation-for="Adcp.Hardware" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Connectortype" class="control-label"></label>
+                <input asp-for="Adcp.Connectortype" class="form-control" />
+                <span asp-validation-for="Adcp.Connectortype" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Frequency" class="control-label"></label>
+                <input asp-for="Adcp.Frequency" class="form-control" />
+                <span asp-validation-for="Adcp.Frequency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Firmware" class="control-label"></label>
+                <input asp-for="Adcp.Firmware" class="form-control" />
+                <span asp-validation-for="Adcp.Firmware" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Software" class="control-label"></label>
+                <input asp-for="Adcp.Software" class="form-control" />
+                <span asp-validation-for="Adcp.Software" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Temperaturepresent" class="control-label"></label>
+                <input asp-for="Adcp.Temperaturepresent" class="form-control" />
+                <span asp-validation-for="Adcp.Temperaturepresent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Pressuresensorpresent" class="control-label"></label>
+                <input asp-for="Adcp.Pressuresensorpresent" class="form-control" />
+                <span asp-validation-for="Adcp.Pressuresensorpresent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Pressuresensorrating" class="control-label"></label>
+                <input asp-for="Adcp.Pressuresensorrating" class="form-control" />
+                <span asp-validation-for="Adcp.Pressuresensorrating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Ethernetinstalled" class="control-label"></label>
+                <input asp-for="Adcp.Ethernetinstalled" class="form-control" />
+                <span asp-validation-for="Adcp.Ethernetinstalled" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Recordersize" class="control-label"></label>
+                <input asp-for="Adcp.Recordersize" class="form-control" />
+                <span asp-validation-for="Adcp.Recordersize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Recorderformatted" class="control-label"></label>
+                <input asp-for="Adcp.Recorderformatted" class="form-control" />
+                <span asp-validation-for="Adcp.Recorderformatted" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Systemtype" class="control-label"></label>
+                <input asp-for="Adcp.Systemtype" class="form-control" />
+                <span asp-validation-for="Adcp.Systemtype" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Application" class="control-label"></label>
+                <input asp-for="Adcp.Application" class="form-control" />
+                <span asp-validation-for="Adcp.Application" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Numbatts" class="control-label"></label>
+                <input asp-for="Adcp.Numbatts" class="form-control" />
+                <span asp-validation-for="Adcp.Numbatts" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Productnumber" class="control-label"></label>
+                <input asp-for="Adcp.Productnumber" class="form-control" />
+                <span asp-validation-for="Adcp.Productnumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Scalefactor" class="control-label"></label>
+                <input asp-for="Adcp.Scalefactor" class="form-control" />
+                <span asp-validation-for="Adcp.Scalefactor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Isvesselmount" class="control-label"></label>
+                <input asp-for="Adcp.Isvesselmount" class="form-control" />
+                <span asp-validation-for="Adcp.Isvesselmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Isriversystem" class="control-label"></label>
+                <input asp-for="Adcp.Isriversystem" class="form-control" />
+                <span asp-validation-for="Adcp.Isriversystem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Boardorientation" class="control-label"></label>
+                <input asp-for="Adcp.Boardorientation" class="form-control" />
+                <span asp-validation-for="Adcp.Boardorientation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Housingtype" class="control-label"></label>
+                <input asp-for="Adcp.Housingtype" class="form-control" />
+                <span asp-validation-for="Adcp.Housingtype" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Cablelength" class="control-label"></label>
+                <input asp-for="Adcp.Cablelength" class="form-control" />
+                <span asp-validation-for="Adcp.Cablelength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Istriggerout" class="control-label"></label>
+                <input asp-for="Adcp.Istriggerout" class="form-control" />
+                <span asp-validation-for="Adcp.Istriggerout" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Istriggerin" class="control-label"></label>
+                <input asp-for="Adcp.Istriggerin" class="form-control" />
+                <span asp-validation-for="Adcp.Istriggerin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Modified" class="control-label"></label>
+                <input asp-for="Adcp.Modified" class="form-control" />
+                <span asp-validation-for="Adcp.Modified" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Adcp.Rmanumber" class="control-label"></label>
+                <input asp-for="Adcp.Rmanumber" class="form-control" />
+                <span asp-validation-for="Adcp.Rmanumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
