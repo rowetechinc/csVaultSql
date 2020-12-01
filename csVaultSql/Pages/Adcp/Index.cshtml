@@ -5,11 +5,43 @@
     ViewData["Title"] = "Index";
 }
 
+@{
+    var prevDisabled = !Model.Adcp.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Adcp.HasNextPage ? "disabled" : "";
+}
+
 <h1>Index</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create"
+       class="btn btn-info">Create New</a>
 </p>
+<p>
+    <a asp-page="./Index"
+       asp-route-currentFilter="@Model.CurrentFilter"
+       asp-route-pageIndex="@(Model.Adcp.PageIndex - 1)"
+       class="btn btn-primary @prevDisabled">
+        Previous
+    </a>
+    <a asp-page="./Index"
+       asp-route-currentFilter="@Model.CurrentFilter"
+       asp-route-pageIndex="@(Model.Adcp.PageIndex + 1)"
+       class="btn btn-primary @nextDisabled">
+        Next
+    </a>
+</p>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            <a asp-page="./Index">Back to full List</a>
+        </p>
+    </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -113,110 +145,125 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Adcp) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Created)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Serialnumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Customer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ordernumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Depthrating)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Headtype)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Hardware)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Connectortype)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Frequency)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Firmware)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Software)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Temperaturepresent)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pressuresensorpresent)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pressuresensorrating)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ethernetinstalled)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Recordersize)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Recorderformatted)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Systemtype)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Application)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Numbatts)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Productnumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Scalefactor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Isvesselmount)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Isriversystem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Boardorientation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Housingtype)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cablelength)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Istriggerout)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Istriggerin)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Modified)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rmanumber)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Adcp)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Created)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Serialnumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ordernumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Depthrating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Headtype)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hardware)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Connectortype)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Frequency)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Firmware)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Software)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Temperaturepresent)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pressuresensorpresent)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pressuresensorrating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ethernetinstalled)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Recordersize)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Recorderformatted)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Systemtype)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Application)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Numbatts)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Productnumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Scalefactor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Isvesselmount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Isriversystem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Boardorientation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Housingtype)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cablelength)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Istriggerout)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Istriggerin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Modified)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rmanumber)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+
+<a asp-page="./Index"
+   asp-route-currentFilter="@Model.CurrentFilter" 
+   asp-route-pageIndex="@(Model.Adcp.PageIndex - 1)"
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-currentFilter="@Model.CurrentFilter" 
+   asp-route-pageIndex="@(Model.Adcp.PageIndex + 1)"
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>

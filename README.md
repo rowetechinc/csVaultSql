@@ -38,7 +38,7 @@ services.AddDbContext<VaultContext>(options => options.UseNpgsql(Configuration.G
 Use Scaffolding to create the DbContext file, and HTML and Razor file for the Model file created.
 * Create a folder Pages\Adcp
 * Right click on the folder Add-> New Scaffold Item
-** Select the Model object created
+  * Select the Model object created
 
 All the files will be generated.  Create a Data folder and move the DbContext file to the folder.
 
@@ -65,7 +65,8 @@ I had to open the file in Libre Writer and save again to fix the UTF-8 issue.  T
 
 ## Create the Table in Postgres
 ```
-CREATE TABLE adcps (id SERIAL PRIMARY KEY, name VARCHAR, created TIMESTAMP, SerialNumber VARCHAR, Customer VARCHAR, OrderNumber VARCHAR, DepthRating VARCHAR, HeadType VARCHAR, Hardware VARCHAR, ConnectorType VARCHAR, Frequency VARCHAR, Firmware VARCHAR, Software VARCHAR, TemperaturePresent BOOLEAN, PressureSensorPresent BOOLEAN, PressureSensorRating VARCHAR, EthernetInstalled BOOLEAN, RecorderSize VARCHAR, RecorderFormatted BOOLEAN, SystemType VARCHAR, Application VARCHAR, NumBatts VARCHAR, ProductNumber VARCHAR, ScaleFactor VARCHAR, IsVesselMount BOOLEAN, IsRiverSystem BOOLEAN, BoardOrientation VARCHAR, HousingType VARCHAR, CableLength VARCHAR, IsTriggerOut BOOLEAN, IsTriggerIn BOOLEAN, Modified TIMESTAMP);
+\c Vault
+CREATE TABLE adcps (id SERIAL PRIMARY KEY, name VARCHAR, created TIMESTAMP, SerialNumber VARCHAR, Customer VARCHAR, OrderNumber VARCHAR, RmaNumber VARCHAR, DepthRating VARCHAR, HeadType VARCHAR, Hardware VARCHAR, ConnectorType VARCHAR, Frequency VARCHAR, Firmware VARCHAR, Software VARCHAR, TemperaturePresent BOOLEAN, PressureSensorPresent BOOLEAN, PressureSensorRating VARCHAR, EthernetInstalled BOOLEAN, RecorderSize VARCHAR, RecorderFormatted BOOLEAN, SystemType VARCHAR, Application VARCHAR, NumBatts VARCHAR, ProductNumber VARCHAR, ScaleFactor VARCHAR, IsVesselMount BOOLEAN, IsRiverSystem BOOLEAN, BoardOrientation VARCHAR, HousingType VARCHAR, CableLength VARCHAR, IsTriggerOut BOOLEAN, IsTriggerIn BOOLEAN, Modified TIMESTAMP);
 ```
 
 
@@ -74,5 +75,6 @@ Start Postgres
 ```
 su - postgres
 psql -U postgres
-copy adcps(name,created,SerialNumber,Customer,OrderNumber,RmaNumber,DepthRating,HeadType,Hardware,ConnectorType,Frequency,Firmware,Software,TemperaturePresent,PressureSensorPresent,PressureSensorRating,EthernetInstalled,RecorderSize,RecorderFormatted,SystemType,Application,NumBatts,ProductNumber,ScaleFactor,IsVesselMount,IsRiverSystem,BoardOrientation,HousingType,CableLength,IsTriggerOut,IsTriggerIn,Modified) FROM '/home/rico/Documents/vault/adcp.csv' DELIMITER ',' CSV HEADER;
+\c Vault
+COPY adcps(name,created,SerialNumber,Customer,OrderNumber,RmaNumber,DepthRating,HeadType,Hardware,ConnectorType,Frequency,Firmware,Software,TemperaturePresent,PressureSensorPresent,PressureSensorRating,EthernetInstalled,RecorderSize,RecorderFormatted,SystemType,Application,NumBatts,ProductNumber,ScaleFactor,IsVesselMount,IsRiverSystem,BoardOrientation,HousingType,CableLength,IsTriggerOut,IsTriggerIn,Modified) FROM '/home/rico/Documents/vault/adcp.csv' DELIMITER ',' CSV HEADER;
 ```
